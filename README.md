@@ -7,4 +7,4 @@ Wogaze es un proyecto en Java y las interfaces están hechas en Java FX. El prop
 autodidactas sin título de educación superior y en situación de desempleo a buscar trabajos solicitados por "clientes" mediante
 la plataforma.
 
-El proyecto no está terminado y le hacen falta módulos, si quieres contribuir tu ayuda es bienvenida!
+El proyecto no está terminado y le hacen falta módulos por terminar.
