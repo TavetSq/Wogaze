@@ -1,0 +1,39 @@
+
+
+.box-ingreso
+{
+	-fx-opacity: 1.0;
+	-fx-text-fill: #fafafa !important;
+}
+
+.box-registro-uno
+{
+	-fx-opacity: 1.0;
+	-fx-text-fill: #323232;
+}
+
+.check-ingreso {
+  -fx-position: absolute;
+  -fx-background-color:  #192b40;
+  -fx-bborder-style: solid;
+  -fx-bborder-color: #fafafa;
+  -fx-bborder-width: 2px;
+}
+
+.text-area > .scroll-pane{
+
+-fx-vbar-policy:always;
+-fx-hbar-policy:never;
+
+}
+
+.chart-series-line {    
+    -fx-stroke-width: 2px;
+    -fx-effect: null;
+}
+
+.color-linea.chart-series-line { -fx-stroke: #1c3248; }
+.data0.chart-pie { -fx-pie-color: #56a7f4; }
+.data1.chart-pie { -fx-pie-color: #1c3248; }
+.data3.chart-pie { -fx-pie-color: #457C02; }
+.chart-legend { -fx-background-color: #fafafa; }

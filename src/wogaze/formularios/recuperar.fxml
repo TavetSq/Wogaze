@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox prefHeight="343.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="532.0" style="-fx-background-color: #2b3d53;">
+         <children>
+            <Label fx:id="lbInformacion" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="252.0" prefHeight="21.0" prefWidth="532.0" text="Texto de informacion" textFill="#5eb1ff" />
+            <Button fx:id="btnRecuperar" layoutX="133.0" layoutY="276.0" mnemonicParsing="false" onAction="#handlebtnRecuperar" prefHeight="56.0" prefWidth="267.0" style="-fx-background-color: #096cc9;" text="RECUPERAR" textFill="WHITE" />
+            <ImageView fitHeight="92.0" fitWidth="81.0" layoutX="127.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../recursos/wogaze-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="76.0" fitWidth="192.0" layoutX="213.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../recursos/wogaze-light.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="200.0" layoutY="413.0" text="¡Que no cunda el pánico!" textFill="#c9c9c9" />
+            <Label layoutX="97.0" layoutY="426.0" text="Ingresa tu usuario y correo electrónico registrados para enviarte" textFill="#c9c9c9" />
+            <Label layoutX="145.0" layoutY="440.0" text="una nueva contraseña a tu correo electrónico." textFill="#c9c9c9" />
+            <Label layoutX="112.0" layoutY="453.0" text="Recuerda cambiar esta una vez ingreses a nuestro sistema." textFill="#c9c9c9" />
+            <TextField id="tfUsuario" fx:id="tfUsuario" layoutX="181.0" layoutY="164.0" prefHeight="30.0" prefWidth="215.0" promptText="Usuario" style="-fx-background-color: #2b3d53;" styleClass="box-ingreso" stylesheets="@estilos.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="134.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../recursos/usuario-icon.png" />
+               </image>
+            </ImageView>
+            <Line endX="120.0" layoutX="279.0" layoutY="195.0" smooth="false" startX="-100.0" stroke="#fafafa" strokeLineCap="ROUND" strokeWidth="2.0" />
+            <TextField id="tfUsuario" fx:id="tfEmail" layoutX="180.0" layoutY="210.0" prefHeight="30.0" prefWidth="215.0" promptText="Correo electrónico" style="-fx-background-color: #2b3d53;" styleClass="box-ingreso" stylesheets="@estilos.css">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="133.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../recursos/mail-icon.png" />
+               </image>
+            </ImageView>
+            <Line endX="120.0" layoutX="278.0" layoutY="241.0" smooth="false" startX="-100.0" stroke="#fafafa" strokeLineCap="ROUND" strokeWidth="2.0" />
+            <Button fx:id="btnRegresar" layoutX="133.0" layoutY="338.0" mnemonicParsing="false" onAction="#handlebtnRegresar" prefHeight="30.0" prefWidth="267.0" style="-fx-background-color: #2b3d53;" text="Regresar a ingresar" textFill="#fafafa" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

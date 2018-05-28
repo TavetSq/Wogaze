@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../recursos/wogaze.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="977.0">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></HBox>
+            <HBox prefHeight="93.0" prefWidth="700.0" style="-fx-background-color: #fff;" HBox.hgrow="ALWAYS">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="210.0">
+                     <children>
+                        <TextField fx:id="tfBuscar" layoutX="14.0" layoutY="39.0" onKeyPressed="#tfBuscarTecla" promptText="Buscar..." style="-fx-background-color: #fff;" />
+                        <ImageView fx:id="btnBuscar" fitHeight="28.0" fitWidth="28.0" layoutX="172.0" layoutY="38.0" onMouseClicked="#handlebtnBuscar" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../recursos/icon-buscar.png" />
+                           </image>
+                        </ImageView>
+                        <Line endX="57.0" layoutX="110.0" layoutY="65.0" startX="-100.0" stroke="#5c5c5c" strokeLineCap="ROUND" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="23.0" prefWidth="200.0" />
+            <VBox prefHeight="41.0" prefWidth="200.0" style="-fx-background-color: #000;">
+               <children>
+                  <AnchorPane fx:id="btnEscritorio" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #e2e2e2;">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="35.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#cargarEscritorio" prefHeight="30.0" prefWidth="164.0" style="-fx-background-color: #e2e2e2;" text="Escritorio" textFill="#5c5c5c">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../recursos/icon-escritorio.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="41.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="35.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="163.0" style="-fx-background-color: #fff;" text="Pedidos" textFill="#5c5c5c">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="21.0" fitWidth="18.0" layoutX="16.0" layoutY="11.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../recursos/icon-trabajos.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="41.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="35.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="163.0" style="-fx-background-color: #fff;" text="Trabajadores" textFill="#5c5c5c">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../recursos/icon-trabajadores.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="41.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="35.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="163.0" style="-fx-background-color: #fff;" text="Mis calificaciones" textFill="#5c5c5c">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../recursos/icon-reviews.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="41.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane fx:id="btnAjustes" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="35.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#cargarAjustes" prefHeight="30.0" prefWidth="163.0" style="-fx-background-color: #fff;" text="Ajustes" textFill="#5c5c5c">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../recursos/icon-ajustes.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="41.0" prefWidth="200.0" />
+            <VBox prefHeight="41.0" prefWidth="200.0" />
+            <VBox prefHeight="41.0" prefWidth="200.0" />
+            <VBox prefHeight="41.0" prefWidth="200.0" />
+            <VBox prefHeight="41.0" prefWidth="200.0" />
+            <VBox prefHeight="41.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnSalir" alignment="BASELINE_LEFT" layoutX="35.0" layoutY="5.0" mnemonicParsing="false" onAction="#handlebtnSalir" prefHeight="30.0" prefWidth="163.0" style="-fx-background-color: #fff;" text="Salir" textFill="#5c5c5c">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="15.0" layoutY="11.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../recursos/icon-salir.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="412.0" prefWidth="700.0" style="-fx-background-color: #fafafa;" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane fx:id="panelTrabajador" prefHeight="604.0" prefWidth="700.0" visible="false">
+               <children>
+                  <Pane prefHeight="601.0" prefWidth="700.0">
+                     <children>
+                        <Pane layoutX="35.0" layoutY="152.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f2f2f2;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="28.0" prefWidth="202.0" text="MI PUNTAJE" textAlignment="CENTER" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="Bebas" size="22.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imgStar1" fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../recursos/estrella.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbPuntaje" alignment="CENTER" layoutX="1.0" layoutY="41.0" prefHeight="86.0" prefWidth="199.0" text="4,76" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="Bebas" size="72.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip autoHide="true" consumeAutoHidingEvents="false" graphicTextGap="1.0" hideOnEscape="false" text="Mi puntaje" wrapText="true">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Label>
+                              <ImageView fx:id="imgStar2" fitHeight="35.0" fitWidth="35.0" layoutX="45.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../recursos/estrella.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgStar3" fitHeight="35.0" fitWidth="35.0" layoutX="83.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../recursos/estrella.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgStar4" fitHeight="35.0" fitWidth="35.0" layoutX="118.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../recursos/estrella.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="imgStar5" fitHeight="35.0" fitWidth="35.0" layoutX="156.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../recursos/estrella-media.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="lbPuntajeDesc" alignment="CENTER" layoutX="-1.0" layoutY="127.0" prefHeight="22.0" prefWidth="199.0" text="Eres un excelente trabajador" textFill="#2d2d2d" />
+                              <Line endX="50.0" layoutX="125.0" layoutY="37.0" startX="-100.0" stroke="#dedede" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="19.0" layoutY="363.0" prefHeight="237.0" prefWidth="235.0">
+                           <children>
+                              <PieChart fx:id="stPieChart" layoutX="4.0" layoutY="25.0" prefHeight="195.0" prefWidth="229.0" style="-fx-border-color: #fafafa;" stylesheets="@estilos.css">
+                                 <styleClass>
+                                    <String fx:value="data0" />
+                                    <String fx:value="data1" />
+                                    <String fx:value="data3" />
+                                    <String fx:value="chart-legend" />
+                                 </styleClass>
+                              </PieChart>
+                              <Label fx:id="lbPieChart" alignment="CENTER" layoutX="-2.0" prefHeight="28.0" prefWidth="236.0" text="mis propuestas" textAlignment="CENTER" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="Bebas" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="50.0" layoutX="141.0" layoutY="31.0" startX="-100.0" stroke="#dedede" />
+                           </children>
+                        </Pane>
+                        <Accordion layoutX="269.0" layoutY="152.0" prefHeight="200.0" prefWidth="417.0">
+                           <panes>
+                              <TitledPane fx:id="titlPaneWogaze" animated="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="99.0" prefWidth="417.0" text="Información general">
+                                 <content>
+                                    <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="122.0" prefWidth="415.0">
+                                       <children>
+                                          <ImageView fitHeight="52.0" fitWidth="57.0" layoutX="4.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../recursos/wogaze-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="64.0" layoutY="15.0" text="Notas de la version">
+                                             <font>
+                                                <Font name="Bebas" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="taTRversionWogaze" layoutX="270.0" layoutY="24.0" text="Wogaze Alpha v1.0">
+                                             <font>
+                                                <Font name="System Italic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="taTRultiActu" layoutX="64.0" layoutY="39.0" text="Última actualización el día 16 de Abril de 2018">
+                                             <font>
+                                                <Font name="System Italic" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <TextArea fx:id="taTRnotasV" editable="false" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="416.0" stylesheets="@estilos.css" wrapText="true" />
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </TitledPane>
+                            <TitledPane fx:id="titlPaneTrabajoActual" animated="false" text="Trabajo actual">
+                                 <content>
+                                    <Pane prefHeight="97.0" prefWidth="415.0" style="-fx-background-color: #f2f2f2;">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" layoutY="6.0" prefHeight="28.0" prefWidth="96.0" text="Cliente" textAlignment="CENTER" textFill="#2d2d2d">
+                                             <font>
+                                                <Font name="Bebas" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbClienteTA" layoutX="104.0" layoutY="10.0" prefHeight="22.0" prefWidth="312.0" text="Breyner David Rojas Cardona" />
+                                          <Label alignment="CENTER_RIGHT" layoutY="28.0" prefHeight="23.0" prefWidth="96.0" text="DIRECCION" textAlignment="CENTER" textFill="#2d2d2d">
+                                             <font>
+                                                <Font name="Bebas" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbDirTA" layoutX="104.0" layoutY="29.0" prefHeight="22.0" prefWidth="311.0" text="Bello - Antioquia, Av. 31 #65-125 Casa 184" />
+                                          <Label alignment="CENTER_RIGHT" layoutY="47.0" prefHeight="23.0" prefWidth="96.0" text="FECHA ENTREGA" textAlignment="CENTER" textFill="#2d2d2d">
+                                             <font>
+                                                <Font name="Bebas" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbEntregaTA" layoutX="105.0" layoutY="48.0" prefHeight="22.0" prefWidth="311.0" text="25 de Mayo, año 2018" />
+                                          <Label alignment="CENTER_RIGHT" layoutY="65.0" prefHeight="23.0" prefWidth="96.0" text="ESTADO" textAlignment="CENTER" textFill="#2d2d2d">
+                                             <font>
+                                                <Font name="Bebas" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lbEstadoTA" layoutX="104.0" layoutY="66.0" prefHeight="22.0" prefWidth="311.0" text="Esperando calificación del cliente" textFill="#2d2d2d" />
+                                          <Button fx:id="btnInfDetalles" layoutX="172.0" layoutY="87.0" mnemonicParsing="false" onAction="#handlebtnInfDetalles" style="-fx-background-color: #5c5c5c;" text="Detalles" textFill="#fafafa" />
+                                          <Button fx:id="btnInfTrabajo" layoutX="104.0" layoutY="87.0" mnemonicParsing="false" onAction="#handlebtnInfTrabajo" style="-fx-background-color: #5c5c5c;" text="Trabajo" textFill="#fafafa" />
+                                          <Label alignment="CENTER_RIGHT" layoutY="88.0" prefHeight="23.0" prefWidth="96.0" text="INFORMAR" textAlignment="CENTER" textFill="#2d2d2d">
+                                             <font>
+                                                <Font name="Bebas" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="158.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../recursos/icon-flecha.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="229.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../recursos/icon-flecha.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="btnInfEntrega" layoutX="244.0" layoutY="87.0" mnemonicParsing="false" onAction="#handlebtnInfEntrega" style="-fx-background-color: #5c5c5c;" text="Entrega" textFill="#fafafa" />
+                                          <ImageView fitHeight="19.0" fitWidth="15.0" layoutX="301.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../recursos/icon-flecha.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button fx:id="btnInfCalificacion" layoutX="316.0" layoutY="87.0" mnemonicParsing="false" onAction="#btnInfCalificacion" prefHeight="10.0" prefWidth="76.0" style="-fx-background-color: #5c5c5c;" text="Calificación" textFill="#fafafa" />
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane fx:id="titlPaneDetallesTrabajo" animated="false" layoutX="10.0" layoutY="10.0" text="Detalles del trabajo actual">
+                                 <content>
+                                    <Pane prefHeight="200.0" prefWidth="415.0" style="-fx-background-color: #f2f2f2;">
+                                       <children>
+                                          <TabPane prefHeight="150.0" prefWidth="415.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                              <Tab text="Mi propuesta">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <TextArea fx:id="taPropuestaTA" editable="false" prefHeight="94.0" prefWidth="415.0" stylesheets="@estilos.css" wrapText="true" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                              <Tab text="Pedido del cliente">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="101.0" prefWidth="414.0">
+                                                         <children>
+                                                            <TextArea fx:id="taCPropuestaTA" editable="false" prefHeight="94.0" prefWidth="415.0" stylesheets="@estilos.css" wrapText="true" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                </content>
+                                              </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </Pane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                        <Pane layoutX="257.0" layoutY="357.0" prefHeight="230.0" prefWidth="431.0">
+                           <children>
+                              <Label alignment="CENTER" layoutY="7.0" prefHeight="28.0" prefWidth="431.0" text="pedidos publicados por clientes" textAlignment="CENTER" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="Bebas" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="230.0" layoutX="150.0" layoutY="39.0" startX="-100.0" stroke="#dedede" />
+                              <LineChart fx:id="stLineChart" layoutX="1.0" layoutY="45.0" prefHeight="184.0" prefWidth="429.0" stylesheets="@estilos.css">
+                                <xAxis>
+                                  <CategoryAxis fx:id="stPedidosX" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis fx:id="StPedidosY" side="LEFT" />
+                                </yAxis>
+                                 <styleClass>
+                                    <String fx:value="chart-series-line" />
+                                    <String fx:value="color-linea" />
+                                 </styleClass>
+                              </LineChart>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <StackPane fx:id="panelCliente" prefHeight="604.0" prefWidth="700.0" visible="false">
+               <children>
+                  <Pane prefHeight="601.0" prefWidth="700.0">
+                     <children>
+                        <Pane layoutX="14.0" layoutY="143.0" prefHeight="444.0" prefWidth="425.0">
+                           <children>
+                              <TabPane fx:id="tpCliente" prefHeight="444.0" prefWidth="425.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Inicio">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="373.0" prefWidth="389.0">
+                                             <children>
+                                                <ImageView fitHeight="83.0" fitWidth="80.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../recursos/wogaze-icon.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label layoutX="107.0" layoutY="27.0" text="Notas de la versión" textFill="#2c2c2c">
+                                                   <font>
+                                                      <Font name="BebasNeue" size="41.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="lbWogazeVersion" layoutX="107.0" layoutY="69.0" text="Wogaze Alpha v1.0" textFill="#2c2c2c">
+                                                   <font>
+                                                      <Font name="System Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextArea fx:id="taNotasVersion" editable="false" layoutX="23.0" layoutY="108.0" prefHeight="307.0" prefWidth="381.0" stylesheets="@estilos.css" wrapText="true">
+                                                   <styleClass>
+                                                      <String fx:value="text-area" />
+                                                      <String fx:value="scroll-pane" />
+                                                   </styleClass>
+                                                </TextArea>
+                                                <Label fx:id="lbWogazeVersion1" layoutX="107.0" layoutY="82.0" text="Última actualización el día 14 de Abril / 2018" textFill="#2c2c2c">
+                                                   <font>
+                                                      <Font name="System Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab fx:id="tabInfoTrabajador" text="Información del trabajador">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fx:id="imgAvatarTrabajador" fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../recursos/avatar-default.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="lbNombreTrabajador" layoutX="127.0" layoutY="65.0" prefHeight="43.0" prefWidth="293.0" text="Omar Arredondo">
+                                                   <font>
+                                                      <Font name="BebasNeue" size="32.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="130.0" layoutY="48.0" prefHeight="31.0" prefWidth="268.0" text="Información del trabajador de mi pedido">
+                                                   <font>
+                                                      <Font name="System Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TabPane layoutY="121.0" prefHeight="295.0" prefWidth="425.0" tabClosingPolicy="UNAVAILABLE">
+                                                  <tabs>
+                                                    <Tab text="General">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <Pane layoutX="17.0" layoutY="22.0" prefHeight="111.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="28.0" prefWidth="202.0" text="Trabajos hechos" textAlignment="CENTER" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label fx:id="lbTrabajosHechos" alignment="CENTER" layoutX="1.0" layoutY="37.0" prefHeight="63.0" prefWidth="199.0" text="12" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="55.0" />
+                                                                           </font>
+                                                                           <tooltip>
+                                                                              <Tooltip autoHide="true" consumeAutoHidingEvents="false" graphicTextGap="1.0" hideOnEscape="false" text="Total de trabajos hechos" wrapText="true">
+                                                                                 <font>
+                                                                                    <Font size="10.0" />
+                                                                                 </font>
+                                                                              </Tooltip>
+                                                                           </tooltip>
+                                                                        </Label>
+                                                                        <Line endX="30.0" layoutX="136.0" layoutY="33.0" startX="-100.0" stroke="#dedede" />
+                                                                     </children>
+                                                                  </Pane>
+                                                                  <Pane layoutX="216.0" layoutY="22.0" prefHeight="111.0" prefWidth="186.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="28.0" prefWidth="187.0" text="Reputacion" textAlignment="CENTER" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label fx:id="lbReputacion" alignment="CENTER" layoutX="1.0" layoutY="37.0" prefHeight="63.0" prefWidth="185.0" text="4,86" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="55.0" />
+                                                                           </font>
+                                                                           <tooltip>
+                                                                              <Tooltip autoHide="true" consumeAutoHidingEvents="false" graphicTextGap="1.0" hideOnEscape="false" text="Calificación de la comunidad por sus trabajos" wrapText="true">
+                                                                                 <font>
+                                                                                    <Font size="10.0" />
+                                                                                 </font>
+                                                                              </Tooltip>
+                                                                           </tooltip>
+                                                                        </Label>
+                                                                        <Line endX="30.0" layoutX="130.0" layoutY="33.0" startX="-100.0" stroke="#dedede" />
+                                                                     </children>
+                                                                  </Pane>
+                                                                  <Pane layoutX="17.0" layoutY="140.0" prefHeight="111.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="28.0" prefWidth="202.0" text="AREA PRINCIPAL" textAlignment="CENTER" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label fx:id="lbAreaPrincipal" alignment="CENTER" layoutX="1.0" layoutY="37.0" prefHeight="63.0" prefWidth="199.0" text="Carpintería" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="System Italic" size="33.0" />
+                                                                           </font>
+                                                                           <tooltip>
+                                                                              <Tooltip autoHide="true" consumeAutoHidingEvents="false" graphicTextGap="1.0" hideOnEscape="false" text="Su ocupación principal" wrapText="true">
+                                                                                 <font>
+                                                                                    <Font size="10.0" />
+                                                                                 </font>
+                                                                              </Tooltip>
+                                                                           </tooltip>
+                                                                        </Label>
+                                                                        <Line endX="30.0" layoutX="136.0" layoutY="33.0" startX="-100.0" stroke="#dedede" />
+                                                                     </children>
+                                                                  </Pane>
+                                                                  <Pane layoutX="209.0" layoutY="140.0" prefHeight="111.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="28.0" prefWidth="202.0" text="Propuestas publicadas" textAlignment="CENTER" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label fx:id="lbPropuestasPublicadas" alignment="CENTER" layoutX="1.0" layoutY="37.0" prefHeight="63.0" prefWidth="199.0" text="22" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="55.0" />
+                                                                           </font>
+                                                                           <tooltip>
+                                                                              <Tooltip autoHide="true" consumeAutoHidingEvents="false" graphicTextGap="1.0" hideOnEscape="false" text="Total de propuestas publicadas rechazadas y/o aceptadas" wrapText="true">
+                                                                                 <font>
+                                                                                    <Font size="10.0" />
+                                                                                 </font>
+                                                                              </Tooltip>
+                                                                           </tooltip>
+                                                                        </Label>
+                                                                        <Line endX="30.0" layoutX="136.0" layoutY="33.0" startX="-100.0" stroke="#dedede" />
+                                                                     </children>
+                                                                  </Pane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                      </content>
+                                                    </Tab>
+                                                    <Tab text="Perfil profesional">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <Pane layoutX="14.0" layoutY="14.0" prefHeight="68.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="28.0" prefWidth="202.0" text="Experiencia laboral" textAlignment="CENTER" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Label fx:id="lbExpLaboral" alignment="CENTER" layoutX="1.0" layoutY="28.0" prefHeight="43.0" prefWidth="199.0" text="Entre 18 y 20 años" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="System Italic" size="17.0" />
+                                                                           </font>
+                                                                           <tooltip>
+                                                                              <Tooltip autoHide="true" consumeAutoHidingEvents="false" graphicTextGap="1.0" hideOnEscape="false" text="Total de trabajos hechos" wrapText="true">
+                                                                                 <font>
+                                                                                    <Font size="10.0" />
+                                                                                 </font>
+                                                                              </Tooltip>
+                                                                           </tooltip>
+                                                                        </Label>
+                                                                        <Line endX="30.0" layoutX="136.0" layoutY="33.0" startX="-100.0" stroke="#dedede" />
+                                                                     </children>
+                                                                  </Pane>
+                                                                  <Pane layoutX="213.0" layoutY="14.0" prefHeight="252.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="28.0" prefWidth="202.0" text="PERFIL PERSONAL" textAlignment="CENTER" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Line endX="30.0" layoutX="136.0" layoutY="33.0" startX="-100.0" stroke="#dedede" />
+                                                                        <TextArea fx:id="taPerfilP" editable="false" layoutX="-1.0" layoutY="40.0" prefHeight="211.0" prefWidth="202.0" stylesheets="@estilos.css" wrapText="true">
+                                                                           <styleClass>
+                                                                              <String fx:value="text-area" />
+                                                                              <String fx:value="scroll-pane" />
+                                                                           </styleClass>
+                                                                        </TextArea>
+                                                                     </children>
+                                                                  </Pane>
+                                                                  <Pane layoutX="6.0" layoutY="82.0" prefHeight="96.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="28.0" prefWidth="202.0" text="HABILIDADES" textAlignment="CENTER" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Line endX="30.0" layoutX="136.0" layoutY="33.0" startX="-100.0" stroke="#dedede" />
+                                                                        <TextArea fx:id="taHabilidadesTra" editable="false" layoutX="-1.0" layoutY="38.0" prefHeight="58.0" prefWidth="202.0" stylesheets="@estilos.css" wrapText="true">
+                                                                           <styleClass>
+                                                                              <String fx:value="text-area" />
+                                                                              <String fx:value="scroll-pane" />
+                                                                           </styleClass>
+                                                                        </TextArea>
+                                                                     </children>
+                                                                  </Pane>
+                                                                  <Pane layoutX="6.0" layoutY="178.0" prefHeight="88.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="28.0" prefWidth="202.0" text="OTRAS HABILIDADES" textAlignment="CENTER" textFill="#2d2d2d">
+                                                                           <font>
+                                                                              <Font name="Bebas" size="18.0" />
+                                                                           </font>
+                                                                        </Label>
+                                                                        <Line endX="30.0" layoutX="136.0" layoutY="33.0" startX="-100.0" stroke="#dedede" />
+                                                                        <TextArea fx:id="taOtrasHabilidadesTra" editable="false" layoutX="-1.0" layoutY="38.0" prefHeight="47.0" prefWidth="202.0" stylesheets="@estilos.css" wrapText="true">
+                                                                           <styleClass>
+                                                                              <String fx:value="text-area" />
+                                                                              <String fx:value="scroll-pane" />
+                                                                           </styleClass>
+                                                                        </TextArea>
+                                                                     </children>
+                                                                  </Pane>
+                                                               </children>
+                                                            </AnchorPane>
+                                                      </content>
+                                                    </Tab>
+                                                  </tabs>
+                                                </TabPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                    <Tab fx:id="tabPedidoActual" text="Pedido actual">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Pane prefHeight="52.0" prefWidth="426.0">
+                                                   <children>
+                                                      <Label fx:id="lbTituloPedido" alignment="CENTER" layoutX="-1.0" layoutY="7.0" prefHeight="28.0" prefWidth="427.0" text="Titulo del pedido" textAlignment="CENTER" textFill="#2d2d2d">
+                                                         <font>
+                                                            <Font name="Bebas" size="22.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Line endX="120.0" layoutX="203.0" layoutY="36.0" startX="-100.0" stroke="#dedede" />
+                                                   </children>
+                                                </Pane>
+                                                <ImageView fx:id="imgTrabajo" fitHeight="123.0" fitWidth="177.0" layoutX="247.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../recursos/trabajos/Artesanía.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Pane layoutX="1.0" layoutY="239.0" prefHeight="41.0" prefWidth="425.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="-1.0" layoutY="7.0" prefHeight="28.0" prefWidth="426.0" text="Artesania" textAlignment="CENTER" textFill="#2d2d2d">
+                                                         <font>
+                                                            <Font name="Bebas" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Line endX="120.0" layoutX="200.0" layoutY="35.0" startX="-100.0" stroke="#dedede" />
+                                                   </children>
+                                                </Pane>
+                                                <TextArea fx:id="taDescripcionTrabajo" editable="false" layoutX="6.0" layoutY="280.0" prefHeight="124.0" prefWidth="235.0" stylesheets="@estilos.css" wrapText="true">
+                                                   <styleClass>
+                                                      <String fx:value="text-area" />
+                                                      <String fx:value="scroll-pane" />
+                                                   </styleClass>
+                                                </TextArea>
+                                                <Pane layoutX="5.0" layoutY="40.0" prefHeight="83.0" prefWidth="415.0">
+                                                   <children>
+                                                      <Label alignment="CENTER_RIGHT" layoutY="-3.0" prefHeight="28.0" prefWidth="96.0" text="Cliente" textAlignment="CENTER" textFill="#2d2d2d">
+                                                         <font>
+                                                            <Font name="Bebas" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lbNombreCl" layoutX="104.0" layoutY="1.0" prefHeight="22.0" prefWidth="312.0" text="Breyner David Rojas Cardona" />
+                                                      <Label alignment="CENTER_RIGHT" layoutY="19.0" prefHeight="23.0" prefWidth="96.0" text="FECHA PEDIDO" textAlignment="CENTER" textFill="#2d2d2d">
+                                                         <font>
+                                                            <Font name="Bebas" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lbFechaPedido" layoutX="104.0" layoutY="20.0" prefHeight="22.0" prefWidth="311.0" text="14 de Abril, año 2018" />
+                                                      <Label alignment="CENTER_RIGHT" layoutY="38.0" prefHeight="23.0" prefWidth="96.0" text="FECHA LÍMITE" textAlignment="CENTER" textFill="#2d2d2d">
+                                                         <font>
+                                                            <Font name="Bebas" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lbFechaLimite" layoutX="105.0" layoutY="39.0" prefHeight="22.0" prefWidth="311.0" text="25 de Mayo, año 2018" />
+                                                      <Label alignment="CENTER_RIGHT" layoutY="56.0" prefHeight="23.0" prefWidth="96.0" text="ESTADO" textAlignment="CENTER" textFill="#2d2d2d">
+                                                         <font>
+                                                            <Font name="Bebas" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="lbEstadoPed" layoutX="104.0" layoutY="57.0" prefHeight="22.0" prefWidth="311.0" text="Puliendo detalles para culminar" textFill="#2d2d2d" />
+                                                      <Button fx:id="btnCalificar" layoutX="317.0" layoutY="53.0" mnemonicParsing="false" onAction="#handlebtnCalificar" prefHeight="20.0" prefWidth="97.0" style="-fx-background-color: #56a7f4;" text="Calificar" textFill="#fafafa">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="11.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </Pane>
+                                                <TextArea fx:id="taPropuestaTrabajador" editable="false" layoutX="6.0" layoutY="153.0" prefHeight="86.0" prefWidth="205.0" stylesheets="@estilos.css" wrapText="true">
+                                                   <styleClass>
+                                                      <String fx:value="text-area" />
+                                                      <String fx:value="scroll-pane" />
+                                                   </styleClass>
+                                                </TextArea>
+                                                <TextArea fx:id="taMiPedido" editable="false" layoutX="218.0" layoutY="153.0" prefHeight="86.0" prefWidth="205.0" stylesheets="@estilos.css" wrapText="true">
+                                                   <styleClass>
+                                                      <String fx:value="text-area" />
+                                                      <String fx:value="scroll-pane" />
+                                                   </styleClass>
+                                                </TextArea>
+                                                <Pane layoutX="6.0" layoutY="114.0" prefHeight="41.0" prefWidth="206.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="-1.0" layoutY="7.0" prefHeight="28.0" prefWidth="209.0" text="Propuesta" textAlignment="CENTER" textFill="#2d2d2d">
+                                                         <font>
+                                                            <Font name="Bebas" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Line endX="35.0" layoutX="133.0" layoutY="35.0" startX="-100.0" stroke="#dedede" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="218.0" layoutY="114.0" prefHeight="41.0" prefWidth="206.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="-1.0" layoutY="7.0" prefHeight="28.0" prefWidth="209.0" text="MI PEDIDO" textAlignment="CENTER" textFill="#2d2d2d">
+                                                         <font>
+                                                            <Font name="Bebas" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Line endX="35.0" layoutX="133.0" layoutY="35.0" startX="-100.0" stroke="#dedede" />
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="450.0" layoutY="143.0" prefHeight="98.0" prefWidth="242.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="28.0" prefWidth="244.0" text="TRABAJOS CALIFICADOS" textAlignment="CENTER" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="Bebas" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbTrabajosCalificados" alignment="CENTER" layoutX="-1.0" layoutY="32.0" prefHeight="63.0" prefWidth="242.0" text="22" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="Bebas" size="55.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip autoHide="true" consumeAutoHidingEvents="false" graphicTextGap="1.0" hideOnEscape="false" text="Total trabajos calificados" wrapText="true">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Label>
+                              <Line endX="70.0" layoutX="135.0" layoutY="31.0" startX="-100.0" stroke="#dedede" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="449.0" layoutY="343.0" prefHeight="251.0" prefWidth="243.0">
+                           <children>
+                              <PieChart fx:id="stPieChartC" layoutX="2.0" layoutY="21.0" prefHeight="228.0" prefWidth="239.0" style="-fx-border-color: #fafafa;" stylesheets="@estilos.css">
+                                 <styleClass>
+                                    <String fx:value="data0" />
+                                    <String fx:value="data1" />
+                                    <String fx:value="data3" />
+                                    <String fx:value="chart-legend" />
+                                 </styleClass>
+                              </PieChart>
+                              <Label alignment="CENTER" layoutX="-3.0" prefHeight="28.0" prefWidth="247.0" text="MAS PEDIDO POR MI" textAlignment="CENTER" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="Bebas" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="70.0" layoutX="135.0" layoutY="31.0" startX="-100.0" stroke="#dedede" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="450.0" layoutY="243.0" prefHeight="98.0" prefWidth="242.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="28.0" prefWidth="244.0" text="PEDIDOS PUBLICADOS" textAlignment="CENTER" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="Bebas" size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbTotalPedidos" alignment="CENTER" layoutX="-1.0" layoutY="32.0" prefHeight="63.0" prefWidth="242.0" text="22" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="Bebas" size="55.0" />
+                                 </font>
+                                 <tooltip>
+                                    <Tooltip autoHide="true" consumeAutoHidingEvents="false" graphicTextGap="1.0" hideOnEscape="false" text="Total pedidos publicados" wrapText="true">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </Label>
+                              <Line endX="70.0" layoutX="135.0" layoutY="31.0" startX="-100.0" stroke="#dedede" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <StackPane fx:id="panelnfoUs" prefHeight="604.0" prefWidth="700.0" visible="false">
+               <children>
+                  <Pane prefHeight="143.0" prefWidth="700.0">
+                     <children>
+                        <ImageView fx:id="avatarImg" fitHeight="125.0" fitWidth="125.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" smooth="false">
+                           <image>
+                              <Image url="@../recursos/avatar-default.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Label fx:id="lbNombre" layoutX="146.0" layoutY="52.0" prefHeight="55.0" prefWidth="548.0" text="hola, breyner rojas" textFill="#2d2d2d">
+                           <font>
+                              <Font name="BebasNeue" size="41.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbDescripcion" layoutX="146.0" layoutY="98.0" prefHeight="19.0" prefWidth="437.0" text="Tu ultima conexión fue el día 8 de Abril a las 4:45p.m" textFill="#2d2d2d">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <StackPane fx:id="panelBuscar" prefHeight="604.0" prefWidth="700.0" visible="false">
+               <children>
+                  <Pane prefHeight="604.0" prefWidth="700.0">
+                     <children>
+                        <Pane fx:id="pnBusquedaError" layoutX="-2.0" prefHeight="606.0" prefWidth="702.0" visible="false">
+                           <children>
+                              <ImageView fitHeight="603.0" fitWidth="700.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../recursos/error-busqueda.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane fx:id="pnBtnRegresar" layoutX="469.0" layoutY="439.0" onMouseClicked="#handlepnBtnRegresar" prefHeight="64.0" prefWidth="219.0" visible="false" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnBusquedaNormal" prefHeight="604.0" prefWidth="700.0" visible="false">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Resultados de búsqueda para:">
+                                 <font>
+                                    <Font name="BebasNeue" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="271.0" layoutY="19.0" text="Trabajo carpintería">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <FlowPane fx:id="pnBuscarPedido" layoutX="13.0" layoutY="98.0" prefHeight="446.0" prefWidth="674.0">
+                                 <children>
+                                    <TableView fx:id="tablaResultados" prefHeight="488.0" prefWidth="674.0">
+                                      <columns>
+                                        <TableColumn prefWidth="673.0" text="Resultados" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </FlowPane>
+                              <Button layoutX="14.0" layoutY="47.0" mnemonicParsing="false" onAction="#handlebtnRegresar" style="-fx-background-color: #2c2c2c;" text="Regresar" textFill="#fafafa">
+                                 <font>
+                                    <Font name="BebasNeue" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label layoutX="91.0" layoutY="51.0" text="¿No encuentras lo que necesitas? Puedes hacer una búsqueda en todas ">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="94.0" layoutY="64.0" text="las áreas con el comando &quot;general:&quot;">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <StackPane fx:id="panelCalificaciones" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </StackPane>
+            <StackPane fx:id="panelPedidos" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </StackPane>
+            <StackPane fx:id="panelTrabajadores" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </StackPane>
+            <StackPane fx:id="panelAjustes" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="143.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+                           <children>
+                              <ImageView fx:id="avatarImgAj" fitHeight="117.0" fitWidth="117.0" layoutX="14.0" layoutY="7.0" onMouseClicked="#handleavatarImgAj" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@../recursos/avatar-default.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="OPEN_HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <Label fx:id="lbAjNombre" layoutX="144.0" layoutY="72.0" prefHeight="55.0" prefWidth="542.0" text="Breyner David Rojas Cardona" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="BebasNeue" size="41.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbAjNombre1" layoutX="144.0" layoutY="57.0" prefHeight="28.0" prefWidth="542.0" text="PANEL DE AJUSTES" textFill="#2d2d2d">
+                                 <font>
+                                    <Font name="BebasNeue" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Button layoutX="603.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlebtnDarDeBaja" prefHeight="23.0" prefWidth="83.0" style="-fx-background-color: #e00202;" text="DAR DE BAJA" textFill="#fafafa">
+                                 <font>
+                                    <Font name="BebasNeue" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <TextField fx:id="tfNombres" alignment="CENTER" editable="false" layoutX="132.0" layoutY="140.0" prefHeight="30.0" prefWidth="183.0" style="-fx-background-color: #fafafa;" text="Breyner David">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" layoutX="37.0" layoutY="149.0" prefHeight="20.0" prefWidth="90.0" text="Nombre/s" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="124.0" prefWidth="90.0" text="Datos básicos" textFill="#575757">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="90.0" layoutX="228.0" layoutY="168.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <TextField fx:id="tfApellidos" alignment="CENTER" editable="false" layoutX="451.0" layoutY="140.0" prefHeight="30.0" prefWidth="182.0" style="-fx-background-color: #fafafa;" text="Rojas Cardona">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" layoutX="340.0" layoutY="149.0" prefHeight="20.0" prefWidth="100.0" text="Apellidos" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="90.0" layoutX="547.0" layoutY="168.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <TextField fx:id="tfIdentificacion" alignment="CENTER" editable="false" layoutX="132.0" layoutY="175.0" prefHeight="30.0" prefWidth="182.0" style="-fx-background-color: #fafafa;" text="1020496241">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="184.0" prefHeight="21.0" prefWidth="113.0" text="Identificación" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="90.0" layoutX="228.0" layoutY="203.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <TextField fx:id="tfTipoId" alignment="CENTER" editable="false" layoutX="451.0" layoutY="175.0" prefHeight="30.0" prefWidth="182.0" style="-fx-background-color: #fafafa;" text="Cédula de ciudadanía">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" layoutX="331.0" layoutY="184.0" prefHeight="20.0" prefWidth="109.0" text="Tipo documento" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="90.0" layoutX="547.0" layoutY="203.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <Label layoutX="29.0" layoutY="221.0" prefHeight="20.0" prefWidth="123.0" text="Datos de contacto" textFill="#575757">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="250.0" prefHeight="20.0" prefWidth="113.0" text="Departamento" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cbDpto" editable="true" layoutX="132.0" layoutY="243.0" prefHeight="25.0" prefWidth="182.0" promptText="Amazonas" style="-fx-background-color: #fafafa;" />
+                        <Line endX="90.0" layoutX="228.0" layoutY="269.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <ComboBox fx:id="cbCalle" editable="true" layoutX="428.0" layoutY="243.0" prefHeight="25.0" prefWidth="59.0" promptText="AV" style="-fx-background-color: #fafafa;" />
+                        <TextField fx:id="tfDir1" alignment="CENTER" layoutX="486.0" layoutY="240.0" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #fafafa;" text="123">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tfDir2" alignment="CENTER" layoutX="541.0" layoutY="241.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: #fafafa;" text="456">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tfDir3" alignment="CENTER" layoutX="592.0" layoutY="241.0" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: #fafafa;" text="789">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" layoutX="311.0" layoutY="250.0" prefHeight="20.0" prefWidth="113.0" text="Dirección" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="112.0" layoutX="525.0" layoutY="269.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <ComboBox fx:id="cbInmueble" editable="true" layoutX="453.0" layoutY="282.0" prefHeight="25.0" prefWidth="76.0" promptText="N/A" style="-fx-background-color: #fafafa;" />
+                        <TextField fx:id="tfInmueble" layoutX="530.0" layoutY="280.0" prefHeight="30.0" prefWidth="101.0" style="-fx-background-color: #fafafa;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" layoutX="331.0" layoutY="287.0" prefHeight="20.0" prefWidth="113.0" text="Inmueble" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="90.0" layoutX="545.0" layoutY="306.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <TextField fx:id="tfTelefono" layoutX="130.0" layoutY="278.0" prefHeight="30.0" prefWidth="184.0" style="-fx-background-color: #fafafa;" text="4979821">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="287.0" prefHeight="20.0" prefWidth="113.0" text="Teléfono" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="90.0" layoutX="226.0" layoutY="306.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <TextField fx:id="tfEmail" layoutX="449.0" layoutY="316.0" prefHeight="30.0" prefWidth="184.0" style="-fx-background-color: #fafafa;" text="mon2bdr@gmail.com">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="tfCelular" layoutX="130.0" layoutY="316.0" prefHeight="30.0" prefWidth="184.0" style="-fx-background-color: #fafafa;" text="3218414558">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER_RIGHT" layoutX="331.0" layoutY="325.0" prefHeight="20.0" prefWidth="113.0" text="E-Mail" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="90.0" layoutX="545.0" layoutY="344.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="325.0" prefHeight="20.0" prefWidth="113.0" text="Celular" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="90.0" layoutX="226.0" layoutY="344.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <Pane fx:id="panelAjustesTrabajador" layoutY="360.0" prefHeight="134.0" prefWidth="699.0" style="-fx-background-color: #e9e9e9;">
+                           <children>
+                              <TextField fx:id="tfCompetenciasTra" layoutX="98.0" layoutY="62.0" prefHeight="30.0" prefWidth="260.0" style="-fx-background-color: #e9e9e9;" text="Ebanistería, chapilla, tintado, ensamblaje" />
+                              <TextField fx:id="tfHabilidadesTra" layoutX="97.0" layoutY="99.0" prefHeight="30.0" prefWidth="260.0" style="-fx-background-color: #e9e9e9;" text="Pintura, plomería" />
+                              <Label layoutX="32.0" layoutY="4.0" prefHeight="20.0" prefWidth="230.0" text="Información como trabajador" textFill="#575757">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="cbExpTra" layoutX="373.0" layoutY="30.0" prefHeight="25.0" prefWidth="313.0" promptText="Sin experiencia" style="-fx-background-color: #e9e9e9;" />
+                              <TextArea fx:id="tfPerfilLaboralTra" layoutX="374.0" layoutY="61.0" prefHeight="67.0" prefWidth="312.0" style="-fx-background-color: #e9e9e9;" stylesheets="@estilos.css" text="Ejemplo de mi perfil laboral" />
+                              <Line endX="163.0" layoutX="196.0" layoutY="129.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <Line endX="163.0" layoutX="196.0" layoutY="92.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <TextField fx:id="tfAreaTrabajador" editable="false" layoutX="98.0" layoutY="26.0" prefHeight="30.0" prefWidth="260.0" style="-fx-background-color: #e9e9e9;" text="Carpintería">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font></TextField>
+                              <Line endX="163.0" layoutX="196.0" layoutY="55.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <Label alignment="CENTER_RIGHT" layoutX="3.0" layoutY="38.0" prefHeight="20.0" prefWidth="90.0" text="Área" textFill="#575757">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="6.0" layoutY="75.0" prefHeight="20.0" prefWidth="90.0" text="Competencias" textFill="#575757">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="5.0" layoutY="109.0" prefHeight="20.0" prefWidth="90.0" text="Habilidades" textFill="#575757">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="218.0" layoutX="470.0" layoutY="55.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <Line endX="218.0" layoutX="471.0" layoutY="129.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="panelAjustesCliente" layoutX="1.0" layoutY="360.0" prefHeight="134.0" prefWidth="699.0" style="-fx-background-color: #e9e9e9;" visible="false">
+                           <children>
+                              <TextField fx:id="tfPedCancelados" alignment="CENTER" editable="false" layoutX="203.0" layoutY="62.0" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #e9e9e9;" text="1">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="tfPedCompletados" alignment="CENTER" editable="false" layoutX="202.0" layoutY="99.0" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #e9e9e9;" text="19">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Label layoutX="32.0" layoutY="4.0" prefHeight="20.0" prefWidth="230.0" text="Información como cliente" textFill="#575757">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="15.0" layoutX="301.0" layoutY="129.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <Line endX="15.0" layoutX="301.0" layoutY="92.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <TextField fx:id="tfPedHechos" alignment="CENTER" editable="false" layoutX="203.0" layoutY="26.0" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #e9e9e9;" text="20">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Line endX="15.0" layoutX="301.0" layoutY="55.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <Label alignment="CENTER_RIGHT" layoutX="70.0" layoutY="38.0" prefHeight="20.0" prefWidth="128.0" text="Pedidos hechos" textFill="#575757">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="72.0" layoutY="75.0" prefHeight="20.0" prefWidth="129.0" text="Pedidos cancelados" textFill="#575757">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" layoutX="49.0" layoutY="109.0" prefHeight="20.0" prefWidth="151.0" text="Pedidos completados" textFill="#575757">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfPromCal" alignment="CENTER" editable="false" layoutX="517.0" layoutY="25.0" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #e9e9e9;" text="3,86">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Line endX="15.0" layoutX="615.0" layoutY="54.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <Label alignment="CENTER_RIGHT" layoutX="341.0" layoutY="37.0" prefHeight="20.0" prefWidth="171.0" text="Promedio calificaciones" textFill="#575757">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfAreaExigida" alignment="CENTER" editable="false" layoutX="518.0" layoutY="61.0" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #e9e9e9;" text="Carpintería">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Line endX="15.0" layoutX="616.0" layoutY="90.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <Label alignment="CENTER_RIGHT" layoutX="385.0" layoutY="73.0" prefHeight="20.0" prefWidth="128.0" text="Área más exigida" textFill="#575757">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="tfTrabajadorPref" alignment="CENTER" editable="false" layoutX="518.0" layoutY="99.0" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #e9e9e9;" text="Breyner Rojas">
+                                 <font>
+                                    <Font name="System Italic" size="12.0" />
+                                 </font>
+                              </TextField>
+                              <Line endX="15.0" layoutX="616.0" layoutY="128.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                              <Label alignment="CENTER_RIGHT" layoutX="363.0" layoutY="111.0" prefHeight="20.0" prefWidth="150.0" text="Trabajador preferido" textFill="#575757">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label layoutX="531.0" layoutY="247.0" text="#">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" layoutX="13.0" layoutY="508.0" prefHeight="20.0" prefWidth="135.0" text="Nueva contraseña" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="tfNuevaContra" layoutX="157.0" layoutY="496.0" style="-fx-background-color: #fafafa;">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <Line endX="90.0" layoutX="249.0" layoutY="527.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <Label alignment="CENTER_RIGHT" layoutX="8.0" layoutY="542.0" prefHeight="20.0" prefWidth="140.0" text="Confirmar contraseña" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="tfConfirmarNueva" layoutX="157.0" layoutY="532.0" style="-fx-background-color: #fafafa;">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <Line endX="90.0" layoutX="249.0" layoutY="561.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <Label alignment="CENTER_RIGHT" layoutX="397.0" layoutY="495.0" prefHeight="20.0" prefWidth="271.0" text="Ingresar contraseña para efectuar cambios" textFill="#575757">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="tfClave" layoutX="493.0" layoutY="519.0" style="-fx-background-color: #fafafa;">
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <Line endX="90.0" layoutX="584.0" layoutY="549.0" startX="-100.0" stroke="#a2a2a2" strokeLineCap="ROUND" />
+                        <Button layoutX="566.0" layoutY="556.0" mnemonicParsing="false" onAction="#handlebtnGuardarCambios" prefHeight="41.0" prefWidth="109.0" style="-fx-background-color: #0299e0;" text="Guardar cambios" textFill="#fafafa">
+                           <font>
+                              <Font name="BebasNeue" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="447.0" layoutY="556.0" mnemonicParsing="false" onAction="#handlebtnDeshacerCambios" prefHeight="41.0" prefWidth="113.0" style="-fx-background-color: #2c2c2c;" text="deshacer cambios" textFill="#fafafa">
+                           <font>
+                              <Font name="BebasNeue" size="15.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="584.0" layoutY="248.0" text="-">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbError" layoutX="14.0" layoutY="570.0" prefHeight="20.0" prefWidth="433.0" text="Error" textFill="#ff5c5c" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
